@@ -14,4 +14,7 @@
     $ cmake --build .
     $ cd ../
     $ sudo python3 setup.py install
-    $ sudo pip3 install face_recognition
+    #python3
+    $ sudo python3 -m pip install face_recognition
+    #python2
+    $ sudo python -m pip install face_recognition
