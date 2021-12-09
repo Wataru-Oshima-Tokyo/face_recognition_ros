@@ -4,6 +4,7 @@
 import cv2 
 import numpy as np
 import dlib 
+import face_recognition
 from sensor_msgs.msg import Image
 import rospy
 import cv_bridge
