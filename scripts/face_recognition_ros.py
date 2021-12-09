@@ -32,7 +32,7 @@ class FACE():
         def recognize(self):
  		try:
 			# self.image_src = cv2.cvtColor(self.image_src, cv2.COLOR_BGR2GRAY)
-			floc = face_recognition.face_locations(self.image_src)[0]
+			floc = face_recognition.face_locations(self.image_src, model="cnn")[0]
 			self.encode_face = face_recognition.face_encodings(self.image_src)[0]
 			cv2.rectangle(self.image_src,(floc[3],floc[0]),(floc[1],floc[2]),(255,0,255),2)
 			self.compare()
