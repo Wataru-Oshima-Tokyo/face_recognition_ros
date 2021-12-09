@@ -25,8 +25,8 @@ class FACE():
 	def image_callback(self,msg):
 		self.image_src = self.bridge.imgmsg_to_cv2(msg, desired_encoding = 'bgr8')
 		## NEW ##
-		self.enocode_image = face_recognition.face_encodings(self.image_src, model="cnn")[0]
-		self.recognize()
+# 		self.enocode_image = face_recognition.face_encodings(self.image_src, model="cnn")[0]
+# 		self.recognize()
 		cv2.imshow("Result", self.image_src)
 		cv2.waitKey(3)
 		
