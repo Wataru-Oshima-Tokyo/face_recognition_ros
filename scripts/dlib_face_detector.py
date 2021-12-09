@@ -15,7 +15,7 @@ class DLIB_FACE():
 	def __init__(self):
 		print("__init__")
 		self.bridge = cv_bridge.CvBridge()
-		self.image_test= face_recognition.load_image_file('/home/jetson/catkin_ws/src/face_recognition_ros/images/test.jpg')
+		self.image_test= face_recognition.load_image_file('/home/jetson/catkin_ws/src/face_recognition_ros/images/test.jpg', model="cnn")
 		# self.image_test=cv2.cvtColor(self.image_src, cv2.COLOR_BGR2GRAY)
 		self.encode_test=face_recognition.face_encodings(self.image_test)[0]
 		self.image_sub = rospy.Subscriber('/camera/color/image_raw', Image, self.image_callback)   #Image型で画像トピックを購読し，コールバック関数を呼ぶ
@@ -34,9 +34,6 @@ class DLIB_FACE():
 
 		### Model for face detection
 		face_detector = dlib.get_frontal_face_detector()
-
-
-		t = time.time()
 		faces = face_detector(self.image_src,0)
 		for face in faces:
 		    x,y,w,h = face.left(),face.top(),face.right(),face.bottom()
