@@ -25,6 +25,7 @@
 2. build in your catkin workspace
 3. launch the realsense node
 4. run this node by
-        rosrun face_recognition_ros face_recognition_ros.py
+
+    rosrun face_recognition_ros face_recognition_ros.py
      
 
