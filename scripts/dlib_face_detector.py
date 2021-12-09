@@ -19,13 +19,13 @@ class DLIB_FACE():
 		self.face_locations = []
 		self.face_encodings = []
     
-	  def image_callback(self,msg):
+	def image_callback(self,msg):
 		self.image_src = self.bridge.imgmsg_to_cv2(msg, desired_encoding = 'bgr8')
 		## NEW ##
-	# 		self.enocode_image = face_recognition.face_encodings(self.image_src)[0]
-	# 		self.recognize()
-	# 		cv2.imshow("Result", self.image_src)
-	# 		cv2.waitKey(3)
+		# 		self.enocode_image = face_recognition.face_encodings(self.image_src)[0]
+		# 		self.recognize()
+		# 		cv2.imshow("Result", self.image_src)
+		# 		cv2.waitKey(3)
 
 		### Model for face detection
 		face_detector = dlib.get_frontal_face_detector()
