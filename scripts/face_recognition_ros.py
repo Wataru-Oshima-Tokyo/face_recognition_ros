@@ -17,7 +17,7 @@ class FACE():
 		self.bridge = cv_bridge.CvBridge()
 		self.image_test= face_recognition.load_image_file('/home/jetson/catkin_ws/src/face_recognition_ros/images/test.jpg')
 		# self.image_test=cv2.cvtColor(self.image_src, cv2.COLOR_BGR2GRAY)
-		self.encode_test=face_recognition.face_encodings(self.image_test, model="cnn")[0]
+# 		self.encode_test=face_recognition.face_encodings(self.image_test, model="cnn")[0]
 		self.image_sub = rospy.Subscriber('/camera/color/image_raw', Image, self.image_callback)   #Image型で画像トピックを購読し，コールバック関数を呼ぶ
 		self.cmd_vel_pub = rospy.Publisher('cmd_vel', Twist, queue_size = 1)
 		self.twist = Twist()    #Twistインスタンス生成
