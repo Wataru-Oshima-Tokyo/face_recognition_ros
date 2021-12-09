@@ -6,6 +6,11 @@ import os
 import numpy as np
 import dlib
 import face_recognition
+from sensor_msgs.msg import Image
+import rospy
+import cv_bridge
+from geometry_msgs.msg import Twist
+
 class DLIB_FACE():
 	def __init__(self):
 		print("__init__")
