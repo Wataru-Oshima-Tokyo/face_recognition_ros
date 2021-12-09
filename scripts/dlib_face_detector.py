@@ -38,7 +38,7 @@ class DLIB_FACE():
 		for face in faces:
 		    x,y,w,h = face.left(),face.top(),face.right(),face.bottom()
 		    face_locations.append((x,y,h,w))
-		face_encodings = face_recognition.face_encodings(image, known_face_locations = face_locations, num_jitters = 1, model="cnn")
+		face_encodings = face_recognition.face_encodings(self.image_src, known_face_locations = face_locations, num_jitters = 1, model="cnn")
 
 		for (left, top, bottom, right) in face_locations:
 		    cv2.rectangle(self.image_src, (left,top), (right, bottom), (0, 0, 255), 2)
