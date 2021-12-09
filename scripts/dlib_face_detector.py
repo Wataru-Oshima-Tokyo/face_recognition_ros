@@ -1,3 +1,7 @@
+
+#!/usr/bin/env python
+# --*-- coding: utf-8 -*-
+
 import cv2
 import os
 import numpy as np
@@ -44,3 +48,8 @@ class DLIB_FACE():
             cv2.rectangle(self.image_src, (left,top), (right, bottom), (0, 0, 255), 2)
             cv2.imshow('Image', self.image_src)
             cv2.waitKey(3)
+if __name__ == "__main__":
+	print("Start")
+	rospy.init_node('follower')
+	fc = DLIB_FACE()
+	rospy.spin()
