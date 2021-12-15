@@ -130,7 +130,7 @@ def main_loop():
             # If we found the face, label the face with some useful information.
             if metadata is not None:
                 time_at_door = datetime.now() - metadata['first_seen_this_interaction']
-                face_label = " "
+                face_label = "Wataru "
 
             # If this is a brand new face, add it to our list of known faces
             else:
