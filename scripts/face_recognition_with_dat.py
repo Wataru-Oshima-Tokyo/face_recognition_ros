@@ -170,6 +170,15 @@ class FACE():
                 metadata["seen_count"] += 1
 
         return metadata
+    
+    def load_known_faces(self):
+        try:
+            with open("known_faces.dat", "rb") as face_data_file:
+                self.known_face_encodings, self.known_face_metadata = pickle.load(face_data_file)
+                print("Known faces loaded from disk.")
+        except:
+            print("No previous face data found - starting with a blank known face list.")
+            pass
 
 
 if __name__ == "__main__":
