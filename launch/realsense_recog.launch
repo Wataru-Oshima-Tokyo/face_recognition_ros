@@ -1,0 +1,9 @@
+<launch>
+    <include file="$(find realsense2_camera)/launch/rs_camera.launch"></include>
+    
+    <node name="face_recognition_ros"
+        pkg="face_recognition_ros"
+        type=face_recognition_with_dat.py"
+        output-"screen"/>
+                                    
+</launch>
