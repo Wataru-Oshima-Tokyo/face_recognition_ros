@@ -30,7 +30,7 @@ class FACE():
 		cv2.imshow("Result", self.image_src)
 		cv2.waitKey(3)
 		
-        def recognize(self):
+    def recognize(self):
  		try:
 			# self.image_src = cv2.cvtColor(self.image_src, cv2.COLOR_BGR2GRAY)
 			floc = face_recognition.face_locations(self.image_src, model="cnn")[0]
