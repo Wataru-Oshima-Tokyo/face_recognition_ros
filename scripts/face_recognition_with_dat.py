@@ -33,7 +33,7 @@ class FACE():
         ## NEW ##
         # 		self.enocode_image = face_recognition.face_encodings(self.image_src, model="cnn")[0]
         # 		self.recognize()
-        self.recognize(self)
+        self.recognize()
         cv2.imshow("Result", self.image_src)
         cv2.waitKey(3)
 
