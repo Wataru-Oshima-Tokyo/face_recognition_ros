@@ -3,7 +3,7 @@
     
     <node name="face_recognition_ros"
         pkg="face_recognition_ros"
-        type=face_recognition_with_dat.py"
-        output-"screen"/>
+        type="face_recognition_with_dat.py"
+        output="screen"/>
                                     
 </launch>
